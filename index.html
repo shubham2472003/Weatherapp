@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather App</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <div class="top-banner">
+      🌟 Made by <strong>Shubham</strong>
+      <button id="modeToggle">🌞</button>
+    </div>
+
+    <div class="animated-bg">
+      <div class="cloud cloud1"></div>
+      <div class="cloud cloud2"></div>
+      <div class="cloud cloud3"></div>
+    </div>
+
+    <div class="container">
+      <h1>🌤️ Weather App</h1>
+
+      <div class="input-section">
+        <label for="cityInput">Enter City Name:</label>
+        <input type="text" id="cityInput" placeholder="e.g., New York, Paris" />
+        <button onclick="getWeather()">Get Weather</button>
+        <button onclick="getLocationWeather()">📍 Use My Location</button>
+      </div>
+
+      <div id="weatherInfo" class="weather-output"></div>
+    </div>
+
+    <footer>
+      <p>🌍 Made with ❤️ by <strong>Shubham</strong></p>
+    </footer>
+  </body>
+</html>
