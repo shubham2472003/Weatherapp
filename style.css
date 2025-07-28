@@ -1,0 +1,169 @@
+:root {
+  --bg-color: #e9f3f9;
+  --text-color: #333;
+  --card-bg: #ffffffcc;
+  --button-bg: #00aaff;
+}
+
+body.dark {
+  --bg-color: #121212;
+  --text-color: #eeeeee;
+  --card-bg: #1f1f1fbb;
+  --button-bg: #2980b9;
+}
+
+/* Body & Background */
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  transition: background 0.5s, color 0.5s;
+  overflow-x: hidden;
+  position: relative;
+}
+
+/* Top Banner */
+.top-banner {
+  background-color: #006699;
+  color: #fff;
+  text-align: center;
+  padding: 12px;
+  font-size: 16px;
+  font-weight: bold;
+  position: relative;
+}
+
+#modeToggle {
+  position: absolute;
+  right: 15px;
+  top: 8px;
+  padding: 6px 10px;
+  border: none;
+  background: #fff;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+/* Cloud Animation Background */
+.animated-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  z-index: -1;
+  overflow: hidden;
+}
+
+.cloud {
+  position: absolute;
+  background-image: url("clouds.png"); /* You must have a transparent cloud image named clouds.png */
+  background-size: cover;
+  width: 200px;
+  height: 100px;
+  opacity: 0.5;
+  animation: floatClouds linear infinite;
+}
+
+.cloud1 {
+  top: 50px;
+  left: -200px;
+  animation-duration: 60s;
+}
+.cloud2 {
+  top: 150px;
+  left: -250px;
+  animation-duration: 80s;
+}
+.cloud3 {
+  top: 250px;
+  left: -300px;
+  animation-duration: 100s;
+}
+
+@keyframes floatClouds {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(150vw);
+  }
+}
+
+/* Main Container */
+.container {
+  max-width: 500px;
+  margin: 100px auto;
+  background-color: var(--card-bg);
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(10px);
+}
+
+/* Input & Buttons */
+.input-section label {
+  font-weight: bold;
+  margin-bottom: 10px;
+  display: block;
+}
+
+input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 16px;
+}
+
+button {
+  width: 100%;
+  padding: 12px;
+  background-color: var(--button-bg);
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  cursor: pointer;
+  margin-bottom: 10px;
+}
+
+button:hover {
+  opacity: 0.9;
+}
+
+/* Weather Output */
+.weather-output {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.weather-output img {
+  width: 80px;
+  margin: 10px 0;
+}
+
+.weather-output h2 {
+  margin-bottom: 10px;
+}
+
+.weather-output p {
+  margin: 6px 0;
+  font-size: 16px;
+}
+
+#errorMsg {
+  color: red;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  margin-top: 50px;
+  color: #555;
+  font-size: 15px;
+}
